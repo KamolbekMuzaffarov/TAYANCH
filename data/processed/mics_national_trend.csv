@@ -1,0 +1,7 @@
+indicator_code,survey,year,value,n_unweighted
+anc_skilled_any,MICS3,2006,99.01,2095
+skilled_birth_attendance,MICS3,2006,99.91,2095
+anc_skilled_any,MICS2,2000,92.89,675
+skilled_birth_attendance,MICS2,2000,89.33,675
+anc_skilled_any,MICS6,2021,98.23,974
+skilled_birth_attendance,MICS6,2021,99.24,974

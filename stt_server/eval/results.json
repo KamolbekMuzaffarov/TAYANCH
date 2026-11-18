@@ -1,0 +1,54 @@
+{
+ "turbo_base": {
+  "medical": {
+   "cases": 60,
+   "fields": 378,
+   "field_acc": 23.5,
+   "wrong_pct": 20.4,
+   "missing_pct": 56.1,
+   "spurious": 0,
+   "exact_cases_pct": 0.0,
+   "low_conf_cases": 60,
+   "wrong_examples": [
+    "med000 systolic_bp: truth=159 got=1 | Stalik basem bir juz elik takkes, diastalik bir juz anbees. Pulsiet mis bir. Hameladarlik ",
+    "med000 diastolic_bp: truth=115 got=1 | Stalik basem bir juz elik takkes, diastalik bir juz anbees. Pulsiet mis bir. Hameladarlik ",
+    "med001 heart_rate: truth=115 got=1 | KAN BASIME 1YUS YETMISH 3K ALTMISH PULS 1YUS ANBISH HARARAT AATTI SAKKIZ BUTUN SAKKIZ SATU",
+    "med001 temperature_c: truth=38.8 got=8.8 | KAN BASIME 1YUS YETMISH 3K ALTMISH PULS 1YUS ANBISH HARARAT AATTI SAKKIZ BUTUN SAKKIZ SATU",
+    "med001 fetal_heart_rate: truth=137 got=1 | KAN BASIME 1YUS YETMISH 3K ALTMISH PULS 1YUS ANBISH HARARAT AATTI SAKKIZ BUTUN SAKKIZ SATU",
+    "med004 heart_rate: truth=116 got=106 | QAN BASIME 156-1101 PULS 106 HRARAT 8-8 BUTUN 2 HAMILADARLIK MUDDATI 20-7 AXEL 3 PLUS"
+   ]
+  },
+  "fleurs": {
+   "n": 150,
+   "wer": 101.3,
+   "cer": 64.7
+  },
+  "seconds": 169
+ },
+ "turbo_base+prompt": {
+  "medical": {
+   "cases": 60,
+   "fields": 378,
+   "field_acc": 63.8,
+   "wrong_pct": 25.1,
+   "missing_pct": 11.1,
+   "spurious": 0,
+   "exact_cases_pct": 16.7,
+   "low_conf_cases": 35,
+   "wrong_examples": [
+    "med000 systolic_bp: truth=159 got=111 | Sistolik bosim 111 takkes, diastolik berjus anbees. Pulsiet mis bir. Hamiladorlik muddati ",
+    "med000 diastolic_bp: truth=115 got=1 | Sistolik bosim 111 takkes, diastolik berjus anbees. Pulsiet mis bir. Hamiladorlik muddati ",
+    "med001 systolic_bp: truth=173 got=113 | Qon bosimi 113 ga 60. Puls 115. Harorat 38,8. Saturats 33. Hamila yurak urishi 113. Hamila",
+    "med001 spo2: truth=93 got=33 | Qon bosimi 113 ga 60. Puls 115. Harorat 38,8. Saturats 33. Hamila yurak urishi 113. Hamila",
+    "med001 fetal_heart_rate: truth=137 got=113 | Qon bosimi 113 ga 60. Puls 115. Harorat 38,8. Saturats 33. Hamila yurak urishi 113. Hamila",
+    "med002 temperature_c: truth=38.2 got=38.0 | Qon basimi 163 ki 73. Puls 97. Harorat 38 buton 2. Saturat 38. Hamila yurak urishi 168."
+   ]
+  },
+  "fleurs": {
+   "n": 150,
+   "wer": 94.8,
+   "cer": 42.2
+  },
+  "seconds": 157
+ }
+}

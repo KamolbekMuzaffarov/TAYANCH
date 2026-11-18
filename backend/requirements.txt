@@ -1,0 +1,27 @@
+# Runtime (pinned; verified with Python 3.11)
+fastapi==0.115.6
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+alembic==1.14.0
+pydantic==2.13.4
+pydantic-settings==2.5.2
+bcrypt==4.0.1
+pyjwt==2.9.0
+cryptography==43.0.1
+pyotp==2.9.0
+httpx==0.28.1
+python-multipart==0.0.32
+anthropic==2.9.0
+scikit-learn==1.5.2
+joblib==1.4.2
+numpy==1.26.4
+# PostgreSQL driver for staging/production
+psycopg[binary]==3.2.3
+
+# Data pipeline (scripts/build_datasets.py)
+pandas==2.2.3
+pyreadstat==1.3.8
+shapely==2.2.0
+
+# Tests
+pytest==8.3.4

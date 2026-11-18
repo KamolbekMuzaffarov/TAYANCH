@@ -1,0 +1,43 @@
+/* Account security page. */
+.ac { min-height: 100dvh; display: flex; flex-direction: column; }
+.ac-main { width: min(720px, 100%); margin: 0 auto; padding: 36px 16px 64px; display: flex; flex-direction: column; gap: 16px; }
+.ac-hero { display: flex; align-items: center; gap: 18px; padding: 8px 4px 16px; }
+.ac-hero h1 { font-size: 34px; letter-spacing: -0.03em; line-height: 1.1; overflow-wrap: anywhere; }
+.ac-avatar { width: 68px; height: 68px; flex: none; border-radius: 50%; display: grid; place-items: center; font-size: 24px; font-weight: 700; color: var(--on-ink); background: var(--spec-orb), var(--ink); box-shadow: var(--btn-shadow); }
+
+.ac-card { padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.ac-card-head { display: flex; align-items: center; gap: 14px; }
+.ac-card-head h2 { font-size: 20px; letter-spacing: -0.015em; }
+.ac-ic { width: 44px; height: 44px; flex: none; border-radius: 14px; display: grid; place-items: center; background: var(--inset); box-shadow: inset 0 0 0 1px var(--line), inset 0 1px 0 var(--glass-edge); }
+.ac-card .btn.small { white-space: nowrap; }
+
+.ac-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ac-list li { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 2px; border-top: 1px solid var(--line); }
+.ac-list li:first-child { border-top: 0; }
+.ac-list li > .icon { flex: none; color: var(--ink-3); }
+.ac-li-t { font-weight: 600; font-size: 16px; }
+.ac-val { letter-spacing: 0; color: var(--ink-2); overflow-wrap: anywhere; text-align: right; }
+.ac-left { align-self: flex-start; color: var(--red-ink); }
+
+.ac-totp { display: flex; gap: 22px; align-items: flex-start; }
+.ac-qr-box { flex: none; padding: 10px; border-radius: var(--r-m); background: #fff; box-shadow: 0 0 0 1px var(--line), var(--shadow); }
+.ac-qr { display: block; width: 188px; height: 188px; }
+.ac-secret { display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: var(--r-m); background: var(--inset); box-shadow: inset 0 0 0 1px var(--line); }
+.ac-secret code { font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; color: var(--ink); }
+.ac-recovery { display: flex; flex-direction: column; gap: 12px; }
+.ac-codes { list-style: none; margin: 0; padding: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; border-radius: var(--r-m); background: var(--inset); box-shadow: inset 0 0 0 1px var(--line); font-size: 16px; }
+.ac-out { display: flex; justify-content: center; padding-top: 12px; }
+.ac-out .btn { min-height: 48px; font-size: 16px; }
+
+@media (max-width: 600px) {
+  .ac-main { padding: 20px 12px 48px; gap: 12px; }
+  .ac-hero { gap: 14px; padding-bottom: 8px; }
+  .ac-hero h1 { font-size: 26px; }
+  .ac-avatar { width: 54px; height: 54px; font-size: 19px; }
+  .ac-card { padding: 18px 16px; }
+  .ac-card-head { flex-wrap: wrap; }
+  .ac-card-head > .grow { flex-basis: calc(100% - 60px); }
+  .ac-card-head > .btn, .ac-card-head > .ob-status { margin-left: 58px; }
+  .ac-totp { flex-direction: column; align-items: stretch; }
+  .ac-qr-box { align-self: center; }
+}

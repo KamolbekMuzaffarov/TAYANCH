@@ -1,0 +1,31 @@
+# Per-computer things: never copy or commit (re-created by install.py)
+.venv/
+node_modules/
+logs/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+_backup/
+.restart
+.reseed
+backend/.env
+backend/.seed_credentials.txt
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+Thumbs.db
+frontend/dist/
+frontend/.vite/
+*.bak
+
+# Not published: documentation, secrets, raw third-party data, local tooling
+*.md
+.env
+.env.*
+**/.env
+**/.env.*
+data/raw/
+.claude/
+backend/models_store/*.bak

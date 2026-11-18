@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mhr">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data/raw/uci/mhr.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

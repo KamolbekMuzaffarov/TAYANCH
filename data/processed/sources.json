@@ -1,0 +1,282 @@
+{
+ "built_at": "2026-11-17T17:25:34.580488+00:00",
+ "sources": [
+  {
+   "key": "siat",
+   "name": "Milliy statistika qo'mitasi — SIAT",
+   "url": "https://siat.stat.uz/",
+   "license": "Open government data (stat.uz terms)",
+   "kind": "official_statistics",
+   "indicators": {
+    "births_total": {
+     "siat_id": 223,
+     "siat_code": "2.01.01.0001",
+     "name_en": "Number of births",
+     "name_uz": "Tug‘ilganlar soni (jami)",
+     "updated": "2026-04-20T14:24:29.920119+05:00",
+     "fetched_at": "2026-11-17T22:17:40+0500"
+    },
+    "infant_mortality_rate": {
+     "siat_id": 586,
+     "siat_code": "2.01.03.0010",
+     "name_en": "Infant mortality rate (total)",
+     "name_uz": "Go‘daklar o‘limi koeffisienti (jami)",
+     "updated": "2026-06-11T18:02:14.603566+05:00",
+     "fetched_at": "2026-11-17T22:17:47+0500"
+    },
+    "infant_deaths": {
+     "siat_id": 616,
+     "siat_code": "2.01.03.0007",
+     "name_en": "Information on infant mortality (total)",
+     "name_uz": "Go‘daklar o‘limi soni (jami)",
+     "updated": "2026-06-11T18:00:16.033142+05:00",
+     "fetched_at": "2026-11-17T22:17:46+0500"
+    },
+    "under5_mortality_rate": {
+     "siat_id": 535,
+     "siat_code": "2.01.03.0004",
+     "name_en": "Child Mortality Rate, under 5 - Total",
+     "name_uz": "5 yoshgacha bolalar o‘limi koeffitsienti (jami)",
+     "updated": "2026-06-11T17:58:26.334595+05:00",
+     "fetched_at": "2026-11-17T22:17:46+0500"
+    },
+    "under5_deaths": {
+     "siat_id": 503,
+     "siat_code": "2.01.03.0001",
+     "name_en": "Information on mortality of children under 5 years-Total",
+     "name_uz": "5 yoshgacha o‘lgan bolalar soni (jami)",
+     "updated": "2026-06-11T17:55:48.717283+05:00",
+     "fetched_at": "2026-11-17T22:17:45+0500"
+    },
+    "maternal_mortality_ratio": {
+     "siat_id": 662,
+     "siat_code": "2.01.03.0014",
+     "name_en": "Maternal mortality ratio",
+     "name_uz": "Onalar o‘limi koeffitsienti",
+     "updated": "2026-06-11T18:06:23.164341+05:00",
+     "fetched_at": "2026-11-17T22:17:48+0500"
+    },
+    "maternal_deaths": {
+     "siat_id": 663,
+     "siat_code": "2.01.03.0013",
+     "name_en": "Maternal mortality",
+     "name_uz": "Onalar o‘limi",
+     "updated": "2026-06-11T18:05:42.131728+05:00",
+     "fetched_at": "2026-11-17T22:17:47+0500"
+    },
+    "preterm_births": {
+     "siat_id": 576,
+     "siat_code": "2.01.01.0034",
+     "name_en": "Premature birth",
+     "name_uz": "Erta tug‘ruqlar soni",
+     "updated": "2026-06-11T17:52:15.007598+05:00",
+     "fetched_at": "2026-11-17T22:17:44+0500"
+    },
+    "adolescent_birth_rate_15_17": {
+     "siat_id": 664,
+     "siat_code": "2.01.01.0027",
+     "name_en": "Level of childbirth in adolescents (15-17 years)",
+     "name_uz": "O‘smir (15-17 yosh) yoshdagi tug‘ish darajasi",
+     "updated": "2026-06-10T21:05:06.658456+05:00",
+     "fetched_at": "2026-11-17T22:17:42+0500"
+    },
+    "total_fertility_rate": {
+     "siat_id": 665,
+     "siat_code": "2.01.01.0028",
+     "name_en": "Total Fertility Rate - Total",
+     "name_uz": "Tug‘ilishning yig‘indi koeffitsienti (jami)",
+     "updated": "2026-11-12T20:42:32.267656+05:00",
+     "fetched_at": "2026-11-17T22:17:43+0500"
+    },
+    "general_fertility_rate": {
+     "siat_id": 241,
+     "siat_code": "2.01.01.0004",
+     "name_en": "General fertility rate",
+     "name_uz": "Tug‘ilish koeffitsienti (jami)",
+     "updated": "2026-11-12T21:25:41.275075+05:00",
+     "fetched_at": "2026-11-17T22:17:41+0500"
+    },
+    "birth_registration_completeness": {
+     "siat_id": 2776,
+     "siat_code": "2.01.01.2600",
+     "name_en": "Completeness of birth registration",
+     "name_uz": "Tug‘ilishni ro‘yxatga olishning to‘liqligi soni",
+     "updated": "2026-06-05T10:36:02.888219+05:00",
+     "fetched_at": "2026-11-17T22:17:45+0500"
+    },
+    "obgyn_doctors": {
+     "siat_id": 1360,
+     "siat_code": "2.04.07.0008",
+     "name_en": "Number of obstetricians and gynecologists",
+     "name_uz": "Akusher-ginekologlar soni",
+     "updated": "2026-10-21T17:25:40.713840+05:00",
+     "fetched_at": "2026-11-17T22:17:49+0500"
+    },
+    "doctors_total": {
+     "siat_id": 2846,
+     "siat_code": "2.04.07.0025",
+     "name_en": "Number of doctors",
+     "name_uz": "Shifokorlar soni",
+     "updated": "2026-10-21T17:17:43.840323+05:00",
+     "fetched_at": "2026-11-17T22:17:50+0500"
+    },
+    "doctors_per_10000": {
+     "siat_id": 3193,
+     "siat_code": "2.04.07.0108",
+     "name_en": "Number of doctors, per 10 000 population",
+     "name_uz": "Shifokorlar soni, 10 000 aholiga nisbatan",
+     "updated": "2026-09-12T12:08:47.119259+05:00",
+     "fetched_at": "2026-11-17T22:17:52+0500"
+    },
+    "maternity_beds_per_10000_women": {
+     "siat_id": 4215,
+     "siat_code": "2.04.07.0131",
+     "name_en": "Provision of pregnant women and women in labour with hospital beds per 10 000 women (15-49 years old)",
+     "name_uz": "Homilador ayollar va tugʻruqdagi ayollarning shifoxona oʻrinlari bilan taʼminlanganligi 10 000 ayolga nisbatan (15-49 yosh)",
+     "updated": "2026-10-27T19:52:04.164941+05:00",
+     "fetched_at": "2026-11-17T22:17:55+0500"
+    },
+    "maternity_beds": {
+     "siat_id": 4228,
+     "siat_code": "2.04.07.0150",
+     "name_en": "Number of hospital beds for pregnant women and women in labour",
+     "name_uz": "Homilador va tuqqan ayollar uchun shifoxona oʻrinlari soni",
+     "updated": "2026-10-27T19:56:30.393671+05:00",
+     "fetched_at": "2026-11-17T22:17:55+0500"
+    },
+    "abortions_per_1000_women": {
+     "siat_id": 4202,
+     "siat_code": "2.04.07.0118",
+     "name_en": "Number of abortions per 1000 women (15-49 years old)",
+     "name_uz": "15-49 yoshdagi 1000 nafar ayollarga nisbatan bola oldirishlar soni",
+     "updated": "2026-10-26T19:52:42.769713+05:00",
+     "fetched_at": "2026-11-17T22:17:53+0500"
+    },
+    "abortions_per_100_births": {
+     "siat_id": 4204,
+     "siat_code": "2.04.07.0120",
+     "name_en": "Number of abortions, per 100 births",
+     "name_uz": "Bola oldirish soni, 100 ta tug‘ruqlarga nisbatan",
+     "updated": "2026-10-26T19:54:33.144259+05:00",
+     "fetched_at": "2026-11-17T22:17:54+0500"
+    },
+    "underweight_children_pct": {
+     "siat_id": 1397,
+     "siat_code": "2.04.07.0031",
+     "name_en": "Proportion of underweight children",
+     "name_uz": "Kam vazn toifasidagi bolalar ulushi",
+     "updated": "2026-09-14T16:59:10.422727+05:00",
+     "fetched_at": "2026-11-17T22:17:50+0500"
+    },
+    "ipv_women_15_49": {
+     "siat_id": 3500,
+     "siat_code": "2.04.09.0116",
+     "name_en": "The number of women aged 15-49 who have experienced physical or sexual violence from an intimate partner",
+     "name_uz": "Jinsiy sheriklari tomonidan jinsiy yoki jismoniy zo‘rlanishga duchor bo‘lgan (15-49 yoshdagilar) ayollar soni",
+     "updated": "2026-06-19T19:18:34.603853+05:00",
+     "fetched_at": "2026-11-17T22:18:04+0500"
+    },
+    "preterm_pct_completed_pregnancies": {
+     "siat_id": 4236,
+     "siat_code": "2.04.07.0158",
+     "name_en": "Percentage of preterm births from the number of women who completed their pregnancy",
+     "name_uz": "Homiladorligi tugagan ayollar sonidan muddatidan oldin tug‘ruqlar ulushi",
+     "updated": "2026-10-28T18:36:33.284238+05:00",
+     "fetched_at": "2026-11-17T22:17:57+0500"
+    },
+    "anaemia_women_completed_pregnancy": {
+     "siat_id": 4238,
+     "siat_code": "2.04.07.0160",
+     "name_en": "Number of women suffering from anemia among women who completed pregnancy",
+     "name_uz": "Homiladorligi tugagan ayollardan kamqonlik kasalligidan azob chekkanlar soni",
+     "updated": "2026-10-28T18:37:34.560625+05:00",
+     "fetched_at": "2026-11-17T22:17:58+0500"
+    },
+    "diabetes_in_pregnancy": {
+     "siat_id": 4240,
+     "siat_code": "2.04.07.0162",
+     "name_en": "Number of women suffering from diabetes during pregnancy",
+     "name_uz": "Homiladorligi tugagan ayollardan qand kasalligidan azob chekkanlar soni",
+     "updated": "2026-10-28T18:38:17.238046+05:00",
+     "fetched_at": "2026-11-17T22:17:58+0500"
+    },
+    "late_toxicosis_cases": {
+     "siat_id": 4241,
+     "siat_code": "2.04.07.0163",
+     "name_en": "Number of cases of late toxicosis among women who have completed pregnancy",
+     "name_uz": "Homiladorligi tugagan ayollardan kechki toksikoz kasalligidan azob chekkanlar soni",
+     "updated": "2026-10-28T18:38:38.977974+05:00",
+     "fetched_at": "2026-11-17T22:17:59+0500"
+    },
+    "labour_bleeding_complications": {
+     "siat_id": 4250,
+     "siat_code": "2.04.07.0172",
+     "name_en": "Complicated labour, bleeding in the prenatal and postpartum periods",
+     "name_uz": "Og‘irlashgan tug‘ruqlar, tug‘ruqdan oldin va keyin qon ketishi",
+     "updated": "2026-10-28T18:41:50.249857+05:00",
+     "fetched_at": "2026-11-17T22:18:02+0500"
+    },
+    "live_births_sick_pct": {
+     "siat_id": 4253,
+     "siat_code": "2.04.07.0175",
+     "name_en": "Percentage of live births born sick or ill (weighing 1000 grams or more)",
+     "name_uz": "Tirik tug‘ilgan bolalardan kasal tug‘ilgan yoki kasallangan bolalar (1000 gram va undan ortiq tana vazni bilan) ulushi",
+     "updated": "2026-10-28T19:23:29.554963+05:00",
+     "fetched_at": "2026-11-17T22:18:02+0500"
+    },
+    "premature_live_births": {
+     "siat_id": 4256,
+     "siat_code": "2.04.07.0178",
+     "name_en": "Number of premature births out of total live births",
+     "name_uz": "Jami tirik tug‘ilgan bolalardan chala tug‘ilganlar soni",
+     "updated": "2026-10-28T19:24:21.470957+05:00",
+     "fetched_at": "2026-11-17T22:18:03+0500"
+    },
+    "maternity_beds_per_10000_women_national": {
+     "siat_id": 3202,
+     "siat_code": "2.04.07.0114",
+     "name_en": "Number of beds for pregnant women and parturient women for 10 000 women (15-49 years)",
+     "name_uz": "Homilador ayollar va tug‘adiganlar uchun o‘rinlar soni 10 000 ayollarga (15-49 yosh)",
+     "updated": "2026-09-12T12:14:26.040994+05:00",
+     "fetched_at": "2026-11-17T22:17:53+0500"
+    }
+   }
+  },
+  {
+   "key": "mics6",
+   "name": "UNICEF MICS6 Uzbekistan 2021-2022",
+   "ref": "UZB_2021_MICS_v01_M",
+   "citation": "United Nations Children's Fund (UNICEF). Uzbekistan - Multiple Indicator Cluster Survey 2021-2022, Round 6. Ref: UZB_2021_MICS_v01_M.",
+   "kind": "household_survey",
+   "note": "Aggregated to region; cluster-robust SE; n<25 suppressed."
+  },
+  {
+   "key": "mics_trend",
+   "name": "UNICEF MICS2 (2000), MICS3 (2006)",
+   "kind": "household_survey",
+   "note": "Only macro-zones in these rounds -> national trend only."
+  },
+  {
+   "key": "geoboundaries",
+   "name": "geoBoundaries gbOpen UZB ADM1/ADM2",
+   "url": "https://www.geoboundaries.org/",
+   "license": "ADM1: ODbL 1.0 (OSM); ADM2: CC BY 3.0 IGO",
+   "kind": "geography",
+   "note": "Not an official boundary source; district codes are provisional."
+  },
+  {
+   "key": "who_gho",
+   "name": "WHO Global Health Observatory",
+   "url": "https://www.who.int/data/gho",
+   "kind": "modelled_estimates",
+   "note": "Different methodology from SIAT - never mixed in one series."
+  },
+  {
+   "key": "uci_mhr",
+   "name": "UCI Maternal Health Risk (id 863)",
+   "license": "CC BY 4.0",
+   "kind": "research_dataset",
+   "note": "Non-Uzbek data; baseline/prototype ML only, shadow mode."
+  }
+ ]
+}

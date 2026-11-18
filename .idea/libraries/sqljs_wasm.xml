@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sqljs-wasm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/frontend/node_modules/rtree-sql.js/dist/sqljs-wasm.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

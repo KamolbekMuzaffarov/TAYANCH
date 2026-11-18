@@ -1,0 +1,53 @@
+/* Facility administrator's page (/muassasa): one calm column — facility, three numbers, staff list. */
+.fc { min-height: 100dvh; display: flex; flex-direction: column; }
+.fc-main { width: 100%; max-width: 920px; margin: 0 auto; padding: 20px 20px 72px; display: flex; flex-direction: column; gap: 16px; }
+.fc-card { padding: 22px; border-radius: var(--r-l); }
+.fc-hero { display: flex; align-items: center; gap: 18px; }
+.fc-hero h1 { font-size: 30px; letter-spacing: -0.03em; line-height: 1.12; margin-top: 4px; overflow-wrap: anywhere; }
+.fc-hero p { margin-top: 6px; font-size: 16px; }
+.fc-hero-ic { width: 56px; height: 56px; flex: none; border-radius: 18px; display: grid; place-items: center; background: var(--inset); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink); }
+
+.fc-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.fc-stat { padding: 16px 18px; border-radius: var(--r-m); display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fc-stat-v { font-size: 32px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
+.fc-stat-v.bad { color: var(--red-ink); }
+.fc-stat-l { font-size: 14px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.fc-bar { display: flex; align-items: center; gap: 12px; padding: 8px 2px 0; }
+.fc-bar h2 { font-size: 22px; letter-spacing: -0.02em; }
+
+.fc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.fc-row { padding: 14px 16px; border-radius: var(--r-m); display: flex; flex-direction: column; gap: 12px; }
+.fc-row-main { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.fc-who { flex: 1.2; min-width: 0; display: flex; flex-direction: column; }
+.fc-name { font-weight: 600; font-size: 16.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fc-sub, .fc-meta > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fc-meta { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.fc-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.fc-danger { color: var(--red-ink); }
+
+.fc-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; padding: 40px 22px; color: var(--ink-2); }
+.fc-skel { display: flex; flex-direction: column; gap: 12px; }
+.fc-skel .skel { height: 96px; border-radius: var(--r-m); }
+
+.fc-sheet { width: min(440px, 100%); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.fc-sheet-head { display: flex; align-items: center; gap: 12px; }
+.fc-sheet-head h2 { flex: 1; font-size: 24px; letter-spacing: -0.025em; }
+
+@media (max-width: 640px) {
+  .fc-main { padding: 14px 16px 56px; gap: 12px; }
+  .fc-card { padding: 18px; }
+  .fc-hero { align-items: flex-start; gap: 14px; }
+  .fc-hero h1 { font-size: 23px; }
+  .fc-hero-ic { width: 46px; height: 46px; border-radius: 15px; }
+  .fc-stats { gap: 8px; }
+  .fc-stat { padding: 12px; }
+  .fc-stat-v { font-size: 26px; }
+  .fc-stat-l { font-size: 12.5px; }
+  .fc-row-main { flex-wrap: wrap; }
+  .fc-who { flex: 1 1 60%; }
+  .fc-meta { flex: 1 1 100%; order: 3; padding-left: 0; }
+  .fc-bar .btn { min-height: 46px; padding: 0 18px; font-size: 16px; }
+  .fc-actions .btn { flex: 1 1 auto; }
+  .fc-sheet { width: 100%; }
+}

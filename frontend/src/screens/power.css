@@ -1,0 +1,42 @@
+/* Batafsil: depth behind the simple screens. Everything wraps cleanly on a phone. */
+.pw-main { max-width: 1020px; margin: 0 auto; padding: 40px 24px 96px; gap: 20px; }
+.pw-title { font-size: clamp(34px, 4vw, 48px); letter-spacing: -0.038em; }
+.pw-lead { font-size: 17px; max-width: 60ch; }
+.pw-tabs { margin: 4px 0; }
+.pw-rows { padding: 6px 20px; }
+.pw-row { display: flex; align-items: baseline; gap: 6px 14px; padding: 11px 0; font-size: 14px; flex-wrap: wrap; }
+.pw-row + .pw-row { border-top: 1px solid var(--line); }
+.pw-row code, .pw-row .pw-break { overflow-wrap: anywhere; min-width: 0; }
+.pw-when { flex: 0 0 150px; color: var(--ink-3); }
+.pw-who { flex: 0 0 200px; font-weight: 600; }
+.pw-path { flex: 0 0 300px; }
+.pw-grow { flex: 1 1 160px; min-width: 0; }
+
+.pw-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pw-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; font-size: 15.5px; }
+.pw-list li { display: flex; gap: 10px; align-items: flex-start; overflow-wrap: anywhere; }
+.pw-list li > .icon { margin-top: 3px; color: var(--ink-3); }
+.pw-kicker { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 650; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); }
+.pw-meta { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; }
+.pw-meta b { font-weight: 600; }
+
+.pw-models { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; }
+.pw-model { gap: 12px; min-width: 0; }
+.pw-model h3 { overflow-wrap: anywhere; }
+.pw-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.pw-chip { display: inline-flex; flex-direction: column; gap: 1px; padding: 9px 13px; border-radius: 14px; background: var(--inset); box-shadow: inset 0 1px 0 var(--glass-edge), inset 0 0 0 1px var(--line); min-width: 76px; }
+.pw-chip b { font-size: 18px; letter-spacing: -0.02em; line-height: 1.15; }
+.pw-chip span { font-size: 11.5px; color: var(--ink-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; overflow-wrap: anywhere; }
+
+.pw-sec { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; }
+.pw-sec .card { gap: 6px; padding: 22px; }
+.pw-sec h3 { font-size: 17px; margin-top: 8px; }
+.pw-sec-ic { width: 40px; height: 40px; border-radius: 13px; display: grid; place-items: center; color: var(--ink); background: var(--inset); box-shadow: inset 0 1px 0 var(--glass-top), inset 0 0 0 1px var(--line); }
+.pw-row code, .pw-path { font-family: var(--mono); font-size: 13px; }
+
+@media (max-width: 640px) {
+  .pw-two { grid-template-columns: 1fr; }
+  .pw-when, .pw-who, .pw-path { flex-basis: auto; }
+  .pw-rows { padding: 4px 16px; }
+  .pw-main { padding: 24px 16px 64px; }
+}

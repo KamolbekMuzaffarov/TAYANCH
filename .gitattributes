@@ -1,0 +1,26 @@
+# Line endings that must not be converted by git (launchers break otherwise).
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
+*.ps1     text eol=crlf
+*.command text eol=lf
+*.sh      text eol=lf
+*.py      text eol=lf
+# Data and model files: never touch (checksums / pickles).
+data/**   -text
+*.joblib  binary
+*.db      binary
+*.sav     binary
+# Comments are removed when files enter the repository (see tools/gitfilter.py; configured per clone).
+*.py      filter=nocomments
+*.ts      filter=nocomments
+*.tsx     filter=nocomments
+*.js      filter=nocomments
+*.mjs     filter=nocomments
+*.cjs     filter=nocomments
+*.css     filter=nocomments
+*.html    filter=nocomments
+*.sh      filter=nocomments
+*.command filter=nocomments
+*.bat     filter=nocomments
+*.ps1     filter=nocomments
+*.sql     filter=nocomments

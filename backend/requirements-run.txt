@@ -1,0 +1,25 @@
+# Tayanch - runtime dependencies for the live demo (install.py uses this file).
+# Unpinned but bounded: must resolve to binary wheels on Python 3.11-3.13 on Windows, macOS and Linux.
+# The original pinned list (Python 3.11, incl. PostgreSQL driver, data pipeline, tests) stays in requirements.txt.
+# NOTE: plain "uvicorn" on purpose - "uvicorn[standard]" pulls uvloop, which does not exist on Windows.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+sqlalchemy>=2.0.35,<2.2
+alembic>=1.14,<2
+pydantic>=2.9,<3
+pydantic-settings>=2.5,<3
+python-dotenv>=1.0
+bcrypt>=4.0.1,<6
+pyjwt>=2.9,<3
+cryptography>=43
+pyotp>=2.9,<3
+httpx>=0.27,<1
+python-multipart>=0.0.9
+anthropic>=2.9,<3
+scikit-learn>=1.5.2,<2
+scipy>=1.13
+joblib>=1.4.2
+numpy>=1.26.4,<3
+pandas>=2.2.3,<4
+# Optional speed-ups (httptools, watchfiles) are installed separately by install.py with --only-binary,
+# so a missing wheel can never break the installation. uvloop is intentionally NOT used.

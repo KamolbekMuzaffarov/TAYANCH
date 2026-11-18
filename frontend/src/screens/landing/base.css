@@ -1,0 +1,108 @@
+/* Shared primitives for the public, sign-in, account and admin screens.
+   Everything is prefixed `ob-` and built only from the design tokens in styles.css, so both themes follow. */
+
+.ob-glass {
+  position: relative; background: var(--surface); border-radius: var(--r-l); box-shadow: var(--glass);
+  -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+}
+.ob-glass.strong { background: var(--surface-2); box-shadow: var(--ring), var(--shadow-lg); }
+/* liquid highlight: a soft specular sweep from the top-left corner */
+.ob-glass.sheen::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(135deg, var(--glass-top) 0%, transparent 32%); opacity: 0.28;
+}
+
+.ob-chip {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 0 14px; border-radius: 999px;
+  font-size: 14px; font-weight: 600; color: var(--ink-2); background: var(--surface-2); box-shadow: var(--ring);
+  white-space: nowrap;
+}
+button.ob-chip { transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease; }
+button.ob-chip:hover:not(:disabled) { background: var(--press); color: var(--ink); }
+button.ob-chip:active:not(:disabled) { transform: scale(0.96); }
+
+.ob-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); }
+
+/* inputs */
+.ob-field { display: flex; flex-direction: column; gap: 8px; }
+.ob-label { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.ob-input {
+  width: 100%; min-height: 54px; padding: 0 18px; border-radius: var(--r-m); border: 0; outline: 0;
+  background: var(--inset); color: var(--ink); font-size: 18px; box-shadow: inset 0 0 0 1px var(--line);
+  transition: box-shadow 0.18s ease, background 0.18s ease;
+}
+.ob-input::placeholder { color: var(--ink-3); opacity: 1; }
+.ob-input:focus { box-shadow: inset 0 0 0 2px var(--focus); background: var(--surface-2); }
+select.ob-input { appearance: none; -webkit-appearance: none; padding-right: 40px; font: inherit; font-size: 16px; min-height: 46px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%), linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
+  background-position: calc(100% - 21px) 50%, calc(100% - 16px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+select.ob-input option { color: #1d1d1f; background: #fff; }
+
+/* segmented control */
+.ob-seg { display: inline-flex; padding: 4px; gap: 2px; border-radius: 999px; background: var(--seg-track); box-shadow: inset 0 0 0 1px var(--line); max-width: 100%; }
+.ob-seg.block { display: flex; }
+.ob-seg.block > button { flex: 1; }
+.ob-seg > button {
+  min-height: 38px; padding: 0 18px; border-radius: 999px; font-size: 15px; font-weight: 600; color: var(--ink-3); white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.ob-seg > button:hover { color: var(--ink); }
+.ob-seg > button[aria-pressed='true'], .ob-seg > button[aria-selected='true'] {
+  background: var(--seg-on); color: var(--ink); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14), inset 0 1px 0 var(--glass-edge);
+}
+
+/* notes */
+.ob-note { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: var(--r-m); font-size: 14px; line-height: 1.4; background: var(--inset); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+.ob-note .icon { flex: none; margin-top: 1px; }
+.ob-note.err { background: var(--red-soft); color: var(--red-ink); box-shadow: none; }
+.ob-note.ok { background: var(--green-soft); color: var(--green-ink); box-shadow: none; }
+.ob-note.demo { background: var(--yellow-soft); color: var(--yellow-ink); box-shadow: none; }
+.ob-note b { font-weight: 700; }
+.ob-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+
+.ob-link { color: var(--blue); font-weight: 600; }
+.ob-link:hover { text-decoration: underline; }
+.ob-link:disabled { color: var(--ink-3); opacity: 1; }
+.ob-divider { height: 1px; background: var(--line); border: 0; margin: 0; width: 100%; }
+.ob-status { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+.ob-status.green { background: var(--green-soft); color: var(--green-ink); }
+.ob-status.yellow { background: var(--yellow-soft); color: var(--yellow-ink); }
+.ob-status.red { background: var(--red-soft); color: var(--red-ink); }
+.ob-status.grey { background: var(--grey-soft); color: var(--grey-ink); }
+
+/* simple page header for standalone pages (sign-in, waiting, account) */
+.ob-head {
+  position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 12px; padding: 12px 20px;
+  background: var(--bar); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--line); box-shadow: inset 0 1px 0 var(--glass-edge);
+}
+.ob-head .brand { white-space: nowrap; }
+.ob-icon-btn {
+  flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink-2);
+  background: var(--inset); box-shadow: inset 0 0 0 1px var(--line), inset 0 1px 0 var(--glass-edge);
+  transition: color 0.2s ease, background 0.2s ease, transform 0.12s ease;
+}
+.ob-icon-btn:hover { color: var(--ink); background: var(--press); }
+.ob-icon-btn:active { transform: scale(0.94); }
+
+/* scroll reveal — progressive enhancement. Content is always visible; an element that scrolls into view
+   gets `.in` from the IntersectionObserver and plays a short entrance that only moves it — opacity is never animated,
+   so a slow, throttled or interrupted animation can not leave anything invisible or washed out. */
+.ob-reveal.in { animation: ob-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) backwards; }
+@keyframes ob-rise { from { transform: translateY(26px) scale(0.985); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ob-reveal.in { animation: none; } }
+
+@media (max-width: 640px) {
+  .ob-head { padding: 10px 14px; gap: 8px; }
+}
+
+/* one-time code: six boxes */
+.ob-code { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.ob-code-box {
+  width: 100%; min-width: 0; height: 60px; padding: 0; text-align: center; font-size: 26px; font-weight: 700; letter-spacing: 0;
+  border: 0; outline: 0; border-radius: var(--r-s); background: var(--inset); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line);
+  transition: box-shadow 0.16s ease, background 0.16s ease, transform 0.16s ease; caret-color: transparent;
+}
+.ob-code-box:focus { box-shadow: inset 0 0 0 2px var(--focus); background: var(--surface-2); transform: translateY(-1px); }
+.ob-code-box:disabled { opacity: 0.6; }
+@media (max-width: 380px) { .ob-code { gap: 6px; } .ob-code-box { height: 52px; font-size: 22px; } }

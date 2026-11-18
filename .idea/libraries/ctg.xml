@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ctg">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data/raw/ml/ctg/ctg.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

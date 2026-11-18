@@ -1,0 +1,6 @@
+.env
+.seed_credentials.txt
+*.db
+models_store/
+__pycache__/
+.pytest_cache/

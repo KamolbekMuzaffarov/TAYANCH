@@ -1,0 +1,53 @@
+/* Sign-in: one glass dialog in the middle of the page. */
+.au { min-height: 100dvh; display: flex; flex-direction: column; }
+.au-main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 32px 16px 40px; }
+.au-card { width: min(460px, 100%); padding: 28px; border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 22px; }
+.au-title { display: flex; align-items: flex-start; gap: 14px; }
+.au-title h1 { font-size: 30px; letter-spacing: -0.03em; line-height: 1.1; }
+.au-title p { margin-top: 6px; font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; }
+.au-title p b { color: var(--ink); font-weight: 600; }
+.au-title .ob-icon-btn { margin-top: 0; }
+
+.au-rows { display: flex; flex-direction: column; gap: 10px; }
+.au-row {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 64px; padding: 10px 16px 10px 12px; text-align: left;
+  border-radius: var(--r-m); background: var(--surface-2); box-shadow: var(--ring);
+  transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+button.au-row:hover:not(:disabled) { background: var(--press); }
+button.au-row:active:not(:disabled) { transform: scale(0.985); }
+.au-row.off { opacity: 0.55; }
+.au-row-ic { width: 42px; height: 42px; flex: none; border-radius: 13px; display: grid; place-items: center; background: var(--inset); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink); }
+.au-row-t { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.au-row-go { color: var(--ink-3); flex: none; transition: transform 0.18s ease; }
+button.au-row:hover:not(:disabled) .au-row-go { transform: translateX(3px); color: var(--ink); }
+.au-google { min-height: 44px; display: flex; justify-content: center; align-items: center; color-scheme: light; }
+
+.au-form { display: flex; flex-direction: column; gap: 16px; }
+.au-phone { position: relative; display: block; }
+.au-phone-pre { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--ink-3); pointer-events: none; letter-spacing: 0; }
+.au-phone .ob-input { padding-left: 74px; letter-spacing: 0.02em; }
+
+.au-demo { border-top: 1px solid var(--line); padding-top: 16px; }
+.au-demo summary { list-style: none; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--ink-3); border-radius: 10px; padding: 4px; transition: color 0.18s ease; }
+.au-demo summary::-webkit-details-marker { display: none; }
+.au-demo summary:hover { color: var(--ink); }
+.au-demo-chev { transition: transform 0.2s ease; }
+.au-demo[open] .au-demo-chev { transform: rotate(180deg); }
+.au-demo-in { display: flex; flex-direction: column; align-items: center; gap: 12px; padding-top: 14px; text-align: center; }
+.au-demo-chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
+.au-demo-chips .ob-chip { min-height: 42px; justify-content: center; }
+.au-foot { max-width: 30em; }
+
+/* waiting for a role */
+.au-wait { align-items: center; text-align: center; padding: 40px 28px; }
+.au-wait-ic { width: 72px; height: 72px; border-radius: 24px; display: grid; place-items: center; background: var(--inset); box-shadow: inset 0 0 0 1px var(--line), inset 0 1px 0 var(--glass-edge); color: var(--ink); }
+.au-wait h1 { font-size: 30px; letter-spacing: -0.03em; line-height: 1.12; text-wrap: balance; }
+.au-wait p { font-size: 17px; text-wrap: balance; }
+.au-wait .btn { min-height: 48px; font-size: 16px; }
+
+@media (max-width: 480px) {
+  .au-main { justify-content: flex-start; padding: 20px 12px 32px; }
+  .au-card { padding: 20px 18px; gap: 18px; border-radius: var(--r-l); }
+  .au-title h1 { font-size: 26px; }
+}
