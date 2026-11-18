@@ -54,7 +54,7 @@ button.nz-back:active { transform: scale(0.92); }
 .nz-mic-wrap { position: relative; width: 232px; height: 232px; display: grid; place-items: center; }
 .nz-mic-wrap::before { content: ''; position: absolute; inset: 14px; border-radius: 50%; background: var(--inset); box-shadow: inset 0 1px 0 var(--glass-top), inset 0 0 0 1px var(--glass-edge), inset 0 -18px 30px -18px var(--sheen); }
 .nz-mic {
-  --mic: var(--ink); position: relative; z-index: 1; width: 164px; height: 164px; border-radius: 50%; color: var(--on-ink);
+  --mic: linear-gradient(180deg, #2a379a, #101a63); position: relative; z-index: 1; width: 164px; height: 164px; border-radius: 50%; color: var(--on-ink);
   display: grid; place-items: center;
   background:
     radial-gradient(110% 80% at 30% 8%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 52%),
@@ -72,8 +72,8 @@ button.nz-back:active { transform: scale(0.92); }
 }
 .nz-mic-wrap.listening .nz-mic, [data-theme='dark'] .nz-mic-wrap.listening .nz-mic {
   color: #fff;
-  background: radial-gradient(110% 80% at 30% 8%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 52%), linear-gradient(180deg, #3d95ff, #0a5fd0);
-  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.5), inset 0 -14px 26px rgba(0, 20, 80, 0.3), 0 22px 44px -12px rgba(10, 102, 216, 0.6);
+  background: radial-gradient(110% 80% at 30% 8%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 52%), linear-gradient(180deg, #3a48b0, #101a63);
+  box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.5), inset 0 -14px 26px rgba(0, 20, 80, 0.3), 0 22px 44px -12px rgba(22, 33, 122, 0.6);
 }
 .nz-mic-wrap.parsing .nz-mic { animation: pulse 1.2s ease-in-out infinite; }
 .nz-ring { position: absolute; inset: 34px; border-radius: 50%; background: var(--blue); opacity: 0; pointer-events: none; }

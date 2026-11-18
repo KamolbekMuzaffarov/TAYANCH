@@ -230,3 +230,18 @@
   .mx-rank-name { flex-wrap: wrap; white-space: normal; gap: 0 7px; }
   .mx-sh-head h2 { font-size: 26px; }
 }
+
+/* full-screen national map: the map fills the whole page, panels float over it as glass (wide screens) */
+@media (min-width: 1100px) {
+  .mx { height: 100vh; height: 100dvh; overflow: hidden; }
+  .mx-main { position: relative; flex: 1; min-height: 0; max-width: none; padding: 0; display: block; }
+  .mx-grid { position: absolute; inset: 0; display: block; }
+  .mx-map { position: absolute; inset: 0; border-radius: 0; box-shadow: none; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 128px 412px 0 16px; }
+  .mx-map-top { top: 92px; left: 24px; right: 412px; }
+  .mx-map-body { min-height: 0; }
+  .mx-legend { position: relative; z-index: 3; margin: 0 0 14px 8px; padding: 10px 16px; border-radius: 16px; background: var(--surface); box-shadow: var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); align-self: flex-start; max-width: calc(100% - 16px); }
+  .mx-top { position: absolute; z-index: 12; top: 16px; left: 24px; right: 412px; pointer-events: none; }
+  .mx-top > * { pointer-events: auto; }
+  .mx-top .mx-hero { flex: 0 1 auto; font-size: clamp(22px, 1.9vw, 32px); padding: 12px 18px; border-radius: 18px; background: var(--surface); box-shadow: var(--glass); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); }
+  .mx-rail { position: absolute; z-index: 12; top: 16px; right: 16px; bottom: 16px; width: 380px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+}

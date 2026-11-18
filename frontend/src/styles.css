@@ -2,7 +2,7 @@
   color-scheme: light;
   --bg: #f3f2ef;
   --bg-raised: #f8f7f5;
-  --blob-a: rgba(126, 160, 255, 0.24);
+  --blob-a: rgba(70, 90, 210, 0.22);
   --blob-b: rgba(255, 176, 150, 0.2);
   --blob-c: rgba(132, 214, 190, 0.2);
   --grain: 0.085;
@@ -55,10 +55,10 @@
   --grey-soft: rgba(46, 44, 60, 0.075);
   --grey-wash: #eeedeb;
   --grey-ink: #55555d;
-  --blue: #0a66d8;
-  --blue-fill: #0a66d8;
-  --blue-soft: rgba(10, 102, 216, 0.11);
-  --focus: rgba(10, 102, 216, 0.55);
+  --blue: #1f2c8f;
+  --blue-fill: #16217a;
+  --blue-soft: rgba(22, 33, 122, 0.1);
+  --focus: rgba(31, 44, 143, 0.5);
 
   /* map: fills stay red / amber / green, borders and labels follow the theme */
   --map-green: #a6dcbc;
@@ -84,8 +84,8 @@
   --spec: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.1) 100%);
   --spec-ink: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55%, rgba(0, 0, 0, 0.16) 100%);
   --spec-orb: radial-gradient(120% 95% at 30% 12%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 52%), radial-gradient(90% 70% at 70% 105%, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 60%);
-  --btn-bg: linear-gradient(180deg, #45454d 0%, #232327 46%, #131316 100%);
-  --btn-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), inset 0 -1px 0 rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.24), 0 10px 22px -8px rgba(0, 0, 0, 0.42);
+  --btn-bg: linear-gradient(180deg, #3a48b0 0%, #1a2585 46%, #101a63 100%);
+  --btn-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.35), 0 0 0 0.5px rgba(10, 16, 70, 0.6), 0 1px 2px rgba(10, 16, 70, 0.24), 0 10px 22px -8px rgba(16, 26, 99, 0.5);
 
   --blur: blur(24px) saturate(180%);
   --blur-strong: blur(36px) saturate(190%);
@@ -160,10 +160,10 @@
   --grey-soft: rgba(255, 255, 255, 0.085);
   --grey-wash: #111113;
   --grey-ink: #c6c6cc;
-  --blue: #5aa9ff;
-  --blue-fill: #1f77e6;
-  --blue-soft: rgba(90, 169, 255, 0.16);
-  --focus: rgba(90, 169, 255, 0.7);
+  --blue: #9aa8ff;
+  --blue-fill: #4a5ad6;
+  --blue-soft: rgba(154, 168, 255, 0.16);
+  --focus: rgba(154, 168, 255, 0.7);
 
   --map-green: #1f9159;
   --map-yellow: #e6a11f;
@@ -425,7 +425,7 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 40px; 
 .orb.red { --c: var(--red); --halo: rgba(229, 56, 45, 0.16); --glow: rgba(229, 56, 45, 0.6); }
 .orb.yellow { --c: var(--yellow); --halo: rgba(242, 162, 12, 0.17); --glow: rgba(242, 162, 12, 0.55); }
 .orb.green { --c: var(--green); --halo: rgba(31, 163, 100, 0.15); --glow: rgba(31, 163, 100, 0.5); }
-.orb.blue { --c: var(--blue); --halo: var(--blue-soft); --glow: rgba(10, 102, 216, 0.5); }
+.orb.blue { --c: var(--blue); --halo: var(--blue-soft); --glow: rgba(22, 33, 122, 0.45); }
 .orb.grey { background: transparent; box-shadow: inset 0 0 0 max(1.5px, 0.14em) var(--grey); }
 .orb.flat { box-shadow: inset 0 -0.12em 0.2em rgba(0, 0, 0, 0.3), inset 0 0 0 0.5px rgba(0, 0, 0, 0.16); }
 .orb.grey.flat { box-shadow: inset 0 0 0 max(1.5px, 0.14em) var(--grey); }
@@ -626,6 +626,6 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 40px; 
 /* brand logo: transparent, red glyph, no tile (overrides the earlier tile style everywhere) */
 .brand-mark { width: 40px !important; height: 40px !important; border-radius: 0 !important; background: none !important; box-shadow: none !important; }
 .brand-mark::before, .brand-mark::after { display: none !important; }
-.brand-glyph { width: 100% !important; height: 100% !important; background: #d42f28 !important; }
-:root[data-theme="dark"] .brand-glyph { background: #ff5a4f !important; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-glyph { background: #ff5a4f !important; } }
+.brand-glyph { width: 100% !important; height: 100% !important; background: #101a63 !important; }
+:root[data-theme="dark"] .brand-glyph { background: #9aa8ff !important; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-glyph { background: #9aa8ff !important; } }
