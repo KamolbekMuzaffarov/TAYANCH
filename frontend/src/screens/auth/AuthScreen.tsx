@@ -112,6 +112,11 @@ const DEMO: { key: Persona | 'admin' | 'facility_admin'; label: string; icon: Ic
   { key: 'admin', label: 'Admin', icon: 'settings' },
 ]
 
+const ROLE_SUB: Record<string, string> = {
+  nurse: 'Tashriflarni kiritish', specialist: 'Signallarga javob berish', leader: 'Jonli xarita va hisobot',
+  facility_admin: 'Xodimlarni boshqarish', admin: 'Tizim boshqaruvi',
+}
+
 export default function AuthScreen() {
   const nav = useNavigate()
   const [mode, setMode] = useState<AuthMode>('login')
@@ -184,7 +189,7 @@ export default function AuthScreen() {
   else if (step === 'second') { title = 'Ikkinchi bosqich'; sub = 'Hisobingiz 2 bosqichli kirish bilan himoyalangan.' }
   else if (mode === 'register') { title = 'Roʻyxatdan oʻtish'; sub = 'Administrator rol bergach, tizim ochiladi.' }
   else if (step === 'identifier') { title = 'Xush kelibsiz'; sub = 'Bir martalik kod yuboramiz.' }
-  else { title = 'Xush kelibsiz'; sub = 'Kirish usulini tanlang.' }
+  else { title = 'Xush kelibsiz'; sub = 'Rolingizni tanlang.' }
 
   return (
     <div className="au">
@@ -196,10 +201,6 @@ export default function AuthScreen() {
 
       <main className="au-main">
         <section className="au-card ob-glass strong sheen fade-in" aria-labelledby="au-title">
-          {step === 'methods' || step === 'identifier' ? (
-            <Seg block label="Kirish yoki roʻyxatdan oʻtish" value={mode} onChange={switchMode}
-              options={[{ value: 'login', label: 'Kirish' }, { value: 'register', label: 'Roʻyxatdan oʻtish' }]} />
-          ) : null}
 
           <div className="au-title">
             {step !== 'methods' && (
@@ -212,13 +213,10 @@ export default function AuthScreen() {
           </div>
 
           {step === 'methods' && (
-            <div className="au-rows fade-in" key={`m-${mode}`}>
-              <GoogleRow mode={mode} onResult={finish} onError={setErr} />
-              <Row icon="mail" title="Email" sub="Bir martalik kod bilan" onClick={() => pick('email')} />
-              <Row icon="phone" title="Telefon raqam" sub="+998 · bir martalik kod bilan" onClick={() => pick('phone')} />
-              {mode === 'login' && passkeySupported() && (
-                <Row icon="fingerprint" title="Passkey" sub="Touch ID, barmoq izi yoki qurilma PIN-kodi" onClick={() => passkey(null)} disabled={busy === 'passkey'} />
-              )}
+            <div className="au-rows fade-in">
+              {DEMO.map((d) => (
+                <Row key={d.key} icon={d.icon} title={d.label} sub={ROLE_SUB[d.key]} onClick={() => demo(d.key)} disabled={busy !== null} />
+              ))}
             </div>
           )}
 
@@ -295,21 +293,6 @@ export default function AuthScreen() {
 
           {err && <Note kind="err">{err}</Note>}
 
-          {(step === 'methods' || step === 'identifier') && (
-            <details className="au-demo" open>
-              <summary><Icon name="sparkles" size={16} />Namoyish rejimi<Icon name="chevron-down" size={16} className="au-demo-chev" /></summary>
-              <div className="au-demo-in">
-                <p className="tiny muted">Roʻyxatdan oʻtmasdan, tayyor rol bilan kirish. Barcha bemorlar sunʼiy.</p>
-                <div className="au-demo-chips">
-                  {DEMO.map((d) => (
-                    <button key={d.key} type="button" className="ob-chip" onClick={() => demo(d.key)} disabled={busy !== null} aria-busy={busy === `demo-${d.key}`}>
-                      <Icon name={d.icon} size={16} />{d.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </details>
-          )}
         </section>
         <p className="tiny muted center au-foot">Tizim tashxis qoʻymaydi. Qarorni shifokor qabul qiladi.</p>
       </main>
